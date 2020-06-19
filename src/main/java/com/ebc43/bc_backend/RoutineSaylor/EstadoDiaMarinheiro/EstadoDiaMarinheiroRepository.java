@@ -1,0 +1,6 @@
+package com.ebc43.bc_backend.RoutineSaylor.EstadoDiaMarinheiro;
+
+import com.ebc43.bc_backend.SoftDeleteRepository.IntegerIdSoftDeleteCrudRepository;
+
+public interface EstadoDiaMarinheiroRepository extends IntegerIdSoftDeleteCrudRepository<EstadoDiaMarinheiro, Integer>{
+}

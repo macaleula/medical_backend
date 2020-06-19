@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: matheus
+Build-Jdk: 11.0.7
+Implementation-Title: bc_43_new
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.ebc43.bc_backend
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/bc_43_new
+Created-By: Maven Integration for Eclipse
+

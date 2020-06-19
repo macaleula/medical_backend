@@ -1,0 +1,6 @@
+package com.ebc43.bc_backend.TaskManagement.PreRequisitoModeloTarefa;
+
+import com.ebc43.bc_backend.SoftDeleteRepository.IntegerIdSoftDeleteCrudRepository;
+
+public interface PreRequisitoModeloTarefaRepository extends IntegerIdSoftDeleteCrudRepository<PreRequisitoModeloTarefa, Integer>{
+}

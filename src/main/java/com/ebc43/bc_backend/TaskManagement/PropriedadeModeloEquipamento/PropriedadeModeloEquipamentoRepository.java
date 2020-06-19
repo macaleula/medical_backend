@@ -1,0 +1,6 @@
+package com.ebc43.bc_backend.TaskManagement.PropriedadeModeloEquipamento;
+
+import com.ebc43.bc_backend.SoftDeleteRepository.IntegerIdSoftDeleteCrudRepository;
+
+public interface PropriedadeModeloEquipamentoRepository extends IntegerIdSoftDeleteCrudRepository<PropriedadeModeloEquipamento, Integer>{
+}
