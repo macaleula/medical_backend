@@ -19,19 +19,19 @@ public class ModeloEmbarcacao extends IntegerIdAbstractEntity {
 	private Marca marca;
 	@Column(nullable = false)
 	@Size(max=45)
-	private String modelo;
+	private String nome;
 	@Column(nullable = false)
-	private Integer tamanho_pes;
+	private Double tamanho_pes;
 	
 	public ModeloEmbarcacao() {
 		super();
 	}
 
-	public ModeloEmbarcacao(Integer id, Marca marca, @Size(max = 45) String modelo,
-			Integer tamanho_pes, Date createdAt, Date updatedAt, Date deletedAt) {
+	public ModeloEmbarcacao(Integer id, Marca marca, @Size(max = 45) String nome,
+			Double tamanho_pes, Date createdAt, Date updatedAt, Date deletedAt) {
 		super(id, createdAt, updatedAt, deletedAt);
 		this.marca = marca;
-		this.modelo = modelo;
+		this.nome = nome;
 		this.tamanho_pes = tamanho_pes;
 	}
 	
@@ -43,19 +43,19 @@ public class ModeloEmbarcacao extends IntegerIdAbstractEntity {
 		this.marca = marca;
 	}
 
-	public String getModelo() {
-		return modelo;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setModelo(String modelo) {
-		this.modelo = modelo;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
-	public Integer getTamanho_pes() {
+	public Double getTamanho_pes() {
 		return tamanho_pes;
 	}
 
-	public void setTamanho_pes(Integer tamanho_pes) {
+	public void setTamanho_pes(Double tamanho_pes) {
 		this.tamanho_pes = tamanho_pes;
 	}
 	

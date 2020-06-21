@@ -29,7 +29,7 @@ public class ModeloEquipamento extends IntegerIdAbstractEntity {
 	private Marca marca;
 	@Column(nullable=false)
 	@Size(max=45)
-	private String modelo;
+	private String nome;
 	@Column(name="precisa_horimetro",nullable=false)
 	private Boolean precisaHorimetro;
 	@OneToMany
@@ -50,13 +50,13 @@ public class ModeloEquipamento extends IntegerIdAbstractEntity {
 	public ModeloEquipamento() {
 	}
 
-	public ModeloEquipamento(Integer id, Marca marca, @Size(max = 45) String modelo,
+	public ModeloEquipamento(Integer id, Marca marca, @Size(max = 45) String nome,
 			Boolean precisaHorimetro, List<ModeloAtributoEquipamento> modelosAtributosEquipamento,
 			List<PropriedadeModeloEquipamento> propriedadesModeloEquipamento, Date createdAt, Date updatedAt,
 			Date deletedAt) {
 		super(id, createdAt, updatedAt, deletedAt);
 		this.marca = marca;
-		this.modelo = modelo;
+		this.nome = nome;
 		this.precisaHorimetro = precisaHorimetro;
 		this.modelosAtributosEquipamento = modelosAtributosEquipamento;
 		this.propriedadesModeloEquipamento = propriedadesModeloEquipamento;
@@ -70,12 +70,12 @@ public class ModeloEquipamento extends IntegerIdAbstractEntity {
 		this.marca = marca;
 	}
 
-	public String getModelo() {
-		return modelo;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setModelo(String modelo) {
-		this.modelo = modelo;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	public Boolean getPrecisaHorimetro() {
