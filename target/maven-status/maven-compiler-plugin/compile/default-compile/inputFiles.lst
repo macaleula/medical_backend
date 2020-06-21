@@ -203,6 +203,7 @@
 /home/matheus/Documents/deploy-spring-boot-aws-eb-master/BC_43_NEW/src/main/java/com/ebc43/bc_backend/Utils/MemberUtil.java
 /home/matheus/Documents/deploy-spring-boot-aws-eb-master/BC_43_NEW/src/main/java/com/ebc43/bc_backend/TaskManagement/Equipamento/EquipamentoController.java
 /home/matheus/Documents/deploy-spring-boot-aws-eb-master/BC_43_NEW/src/main/java/com/ebc43/bc_backend/TaskManagement/ModeloEvidenciaTarefa/ModeloEvidenciaTarefaNotFoundException.java
+/home/matheus/Documents/deploy-spring-boot-aws-eb-master/BC_43_NEW/src/main/java/com/ebc43/bc_backend/TaskManagement/Marca/Marca.java
 /home/matheus/Documents/deploy-spring-boot-aws-eb-master/BC_43_NEW/src/main/java/com/ebc43/bc_backend/TaskManagement/InterdicaoEquipamento/InterdicaoEquipamentoRepository.java
 /home/matheus/Documents/deploy-spring-boot-aws-eb-master/BC_43_NEW/src/main/java/com/ebc43/bc_backend/RoutineSaylor/EscalaDiaTrabalho/EscalaDiaTrabalhoService.java
 /home/matheus/Documents/deploy-spring-boot-aws-eb-master/BC_43_NEW/src/main/java/com/ebc43/bc_backend/Security/AuthenticationFacade.java

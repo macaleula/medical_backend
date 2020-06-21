@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
@@ -15,6 +16,7 @@ import org.hibernate.annotations.SQLDeleteAll;
 import org.hibernate.annotations.Where;
 
 import com.ebc43.bc_backend.AbstractEntity.IntegerIdAbstractEntity;
+import com.ebc43.bc_backend.TaskManagement.Marca.Marca;
 import com.ebc43.bc_backend.TaskManagement.ModeloAtributoEquipamento.ModeloAtributoEquipamento;
 import com.ebc43.bc_backend.TaskManagement.PropriedadeModeloEquipamento.PropriedadeModeloEquipamento;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
@@ -22,9 +24,9 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 @Entity
 @Table(name="modelo_equipamento")
 public class ModeloEquipamento extends IntegerIdAbstractEntity {
-	@Column(nullable=false)
-	@Size(max=45)
-	private String marca;
+	@ManyToOne
+	@JoinColumn(name="marca_id",nullable=false)
+	private Marca marca;
 	@Column(nullable=false)
 	@Size(max=45)
 	private String modelo;
@@ -48,7 +50,7 @@ public class ModeloEquipamento extends IntegerIdAbstractEntity {
 	public ModeloEquipamento() {
 	}
 
-	public ModeloEquipamento(Integer id, @Size(max = 45) String marca, @Size(max = 45) String modelo,
+	public ModeloEquipamento(Integer id, Marca marca, @Size(max = 45) String modelo,
 			Boolean precisaHorimetro, List<ModeloAtributoEquipamento> modelosAtributosEquipamento,
 			List<PropriedadeModeloEquipamento> propriedadesModeloEquipamento, Date createdAt, Date updatedAt,
 			Date deletedAt) {
@@ -60,11 +62,11 @@ public class ModeloEquipamento extends IntegerIdAbstractEntity {
 		this.propriedadesModeloEquipamento = propriedadesModeloEquipamento;
 	}
 
-	public String getMarca() {
+	public Marca getMarca() {
 		return marca;
 	}
 
-	public void setMarca(String marca) {
+	public void setMarca(Marca marca) {
 		this.marca = marca;
 	}
 

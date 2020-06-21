@@ -21,7 +21,7 @@ public class TarefaSiService extends TarefaService {
 
 	@Override
 	Tarefa findUltimaFinalizadaByModeloTarefa(Integer modeloTarefaId) {
-		// TODO Auto-generated method stub
+		// NOT IMPLEMENTED
 		return null;
 	}
 

@@ -3,17 +3,20 @@ package com.ebc43.bc_backend.BoatManagement.ModeloEmbarcacao;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
 import com.ebc43.bc_backend.AbstractEntity.IntegerIdAbstractEntity;
+import com.ebc43.bc_backend.TaskManagement.Marca.Marca;
 
 @Entity
 @Table(name="modelo_embarcacao")
 public class ModeloEmbarcacao extends IntegerIdAbstractEntity {
-	@Column(nullable = false)
-	@Size(max=45)
-	private String marca;
+	@ManyToOne
+	@JoinColumn(name="marca_id",nullable=false)
+	private Marca marca;
 	@Column(nullable = false)
 	@Size(max=45)
 	private String modelo;
@@ -24,7 +27,7 @@ public class ModeloEmbarcacao extends IntegerIdAbstractEntity {
 		super();
 	}
 
-	public ModeloEmbarcacao(Integer id, @Size(max = 45) String marca, @Size(max = 45) String modelo,
+	public ModeloEmbarcacao(Integer id, Marca marca, @Size(max = 45) String modelo,
 			Integer tamanho_pes, Date createdAt, Date updatedAt, Date deletedAt) {
 		super(id, createdAt, updatedAt, deletedAt);
 		this.marca = marca;
@@ -32,11 +35,11 @@ public class ModeloEmbarcacao extends IntegerIdAbstractEntity {
 		this.tamanho_pes = tamanho_pes;
 	}
 	
-	public String getMarca() {
+	public Marca getMarca() {
 		return marca;
 	}
 
-	public void setMarca(String marca) {
+	public void setMarca(Marca marca) {
 		this.marca = marca;
 	}
 

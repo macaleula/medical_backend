@@ -15,6 +15,14 @@ public class FIleReader {
 
 	}
 	
+	public static void table_inherits() throws FileNotFoundException, IOException {
+		try(BufferedReader br = new BufferedReader(new FileReader("tables.txt"))) {
+		    for(String line; (line = br.readLine()) != null; ) {
+		    	System.out.println("CREATE TABLE " + line +"_archive () INHERITS (" + line + ");");
+		    }
+		}
+	}
+	
 	public static void triggers() throws FileNotFoundException, IOException {
 		try(BufferedReader br = new BufferedReader(new FileReader("tables.txt"))) {
 		    for(String line; (line = br.readLine()) != null; ) {
@@ -24,10 +32,9 @@ public class FIleReader {
 		    	System.out.println("        OR DELETE");
 		    	System.out.println("    ON " + line);
 		    	System.out.println("    FOR EACH ROW");
-		    	System.out.println("    EXECUTE PROCEDURE soft_delete();");
+		    	System.out.println("    EXECUTE PROCEDURE archive_record();");
 		    	System.out.println("");
 		    }
-		    // line is not visible here.
 		}
 	}
 	
