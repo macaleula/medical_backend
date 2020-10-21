@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
-Built-By: matheus
-Build-Jdk: 11.0.7
-Implementation-Title: bc_43_new
+Implementation-Title: medical_app
 Implementation-Version: 0.0.1-SNAPSHOT
-Implementation-Vendor-Id: com.ebc43.bc_backend
-Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
- -starter-parent/bc_43_new
+Built-By: Mathe
+Implementation-Vendor-Id: com.medical_app.bc_backend
+Build-Jdk: 1.8.0_261
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/medical_app
 Created-By: Maven Integration for Eclipse
 

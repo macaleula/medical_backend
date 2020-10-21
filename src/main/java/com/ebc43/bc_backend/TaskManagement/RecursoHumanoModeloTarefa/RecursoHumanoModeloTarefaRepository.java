@@ -1,7 +1,0 @@
-package com.ebc43.bc_backend.TaskManagement.RecursoHumanoModeloTarefa;
-
-import com.ebc43.bc_backend.SoftDeleteRepository.IntegerIdSoftDeleteCrudRepository;
-
-
-public interface RecursoHumanoModeloTarefaRepository extends IntegerIdSoftDeleteCrudRepository<RecursoHumanoModeloTarefa, Integer>{
-}

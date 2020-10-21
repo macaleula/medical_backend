@@ -1,5 +1,0 @@
-INSERT INTO tipo_usuario (nome, UpdatedByServer) VALUES 
-('SI', NOW()),
-('PR', NOW()),
-('MR', NOW()),
-('AU', NOW());

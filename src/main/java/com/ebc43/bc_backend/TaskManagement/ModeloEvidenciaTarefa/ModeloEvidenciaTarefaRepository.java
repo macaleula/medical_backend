@@ -1,6 +1,0 @@
-package com.ebc43.bc_backend.TaskManagement.ModeloEvidenciaTarefa;
-
-import com.ebc43.bc_backend.SoftDeleteRepository.IntegerIdSoftDeleteCrudRepository;
-
-public interface ModeloEvidenciaTarefaRepository extends IntegerIdSoftDeleteCrudRepository<ModeloEvidenciaTarefa, Integer>{
-}

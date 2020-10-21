@@ -2,7 +2,7 @@
                 
     
     
-    <wb-module deploy-name="bc_43_new-0.0.1-SNAPSHOT">
+    <wb-module deploy-name="medical_app-0.0.1-SNAPSHOT">
                                 
         
         
@@ -19,10 +19,8 @@
         
         
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-                        
-        
-        <property name="context-root" value="bc_43_new"/>
         <property name="java-output-path" value="/bc_43_new/target/classes"/>
+        <property name="context-root" value="medical_app"/>
                             
     
     

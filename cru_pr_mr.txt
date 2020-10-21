@@ -1,5 +1,0 @@
-/equipamento
-/etapa_tarefa
-/tarefa
-/beacon_usuario
-/informacoes_sensiveis
