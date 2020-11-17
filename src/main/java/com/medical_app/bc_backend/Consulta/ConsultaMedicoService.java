@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.medical_app.bc_backend.Utils.AuthenticationUtil;
 
-//@Service
+@Service
 public class ConsultaMedicoService extends ConsultaService {
 
 	public ConsultaMedicoService(ConsultaRepository repository) {

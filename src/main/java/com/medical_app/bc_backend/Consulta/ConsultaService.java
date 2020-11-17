@@ -4,12 +4,10 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import com.medical_app.bc_backend.Security.IAuthenticationFacade;
 
-@Service
-public class ConsultaService {
+public abstract class ConsultaService {
 	@Autowired
     private IAuthenticationFacade authenticationFacade;
 	

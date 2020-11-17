@@ -17,8 +17,8 @@ public class UsuarioService {
 	}
 
 	Usuario newUsuario(Usuario newUsuario) {
-		System.out.println("informacoesSensiveis.username");
-	    return null;//repository.save(newUsuario);
+		System.out.println(newUsuario.getNome());
+	    return repository.save(newUsuario);
     }
 
 	Usuario one(Integer id) {
@@ -44,6 +44,12 @@ public class UsuarioService {
 		//Usuario u = repository.findById(id).get();
 
 		repository.deleteById(id);
+	}
+
+	public List<Usuario> allByMunicipioName(String nomeMunicipio) {
+		// TODO Auto-generated method stub
+		System.out.println("\n\n\n\n" + nomeMunicipio + "\n\n\n\n");
+		return repository.findAllByMunicipio(nomeMunicipio);
 	}
 
 }

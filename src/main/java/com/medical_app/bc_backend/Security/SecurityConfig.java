@@ -64,17 +64,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			// Autorização POST para autenticação
 		
 		    .antMatchers(HttpMethod.POST, 
-		    		"/authenticate"
+		    		"/authenticate",
+		    		"/usuario"
 		    		).permitAll()
 		   
-		    .antMatchers(HttpMethod.GET, 
-		    		"/consulta/**", 
-		    		"/usuario/**", 
-		    		"/tipo_usuario/**"
-		    		).permitAll()
-	    
-		    // Autorização READ MR
-	/*	    
 		    .antMatchers(HttpMethod.POST, 
 		    		"/consulta/**"
 		    		).hasAuthority("Paciente")
@@ -84,7 +77,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		    		"/usuario/**", 
 		    		"/tipo_usuario/**"
 		    		).hasAnyAuthority("Médico","Paciente")
-	    
+	    /*
 		    // Autorização UC PR 
 		    
 		    .antMatchers(HttpMethod.POST, 

@@ -43,6 +43,11 @@ public class UsuarioController {
 	List<Usuario> all() {
 		return service.all();
 	}
+	
+	@GetMapping("/usuario/municipio/{nomeMunicipio}")
+	List<Usuario> allByMunicipioName(@PathVariable String nomeMunicipio) {
+		return service.allByMunicipioName(nomeMunicipio);
+	}
 
 	@PostMapping("/usuario")
 	Usuario newUsuario(@RequestBody Usuario newUsuario) {

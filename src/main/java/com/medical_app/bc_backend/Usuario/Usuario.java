@@ -7,6 +7,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
 import com.medical_app.bc_backend.AbstractEntity.EntidadeAbstrata;
 import com.medical_app.bc_backend.TipoUsuario.TipoUsuario;
 
@@ -19,7 +21,7 @@ public class Usuario extends EntidadeAbstrata {
 	@Column(nullable = false)
 	private String username;
 	@Column(nullable = false)
-	@JsonIgnore
+	@JsonProperty(access = Access.WRITE_ONLY)	
 	private String password;
 	@Column(nullable = false)
 	private String nome;
